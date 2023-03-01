@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>ATM - Masukan Kartu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#324154] px-28 py-10 h-[100vh] flex items-center">
+  <div class="container bg-[#597298] rounded-lg flex">
+    <div
+      class="menu w-8/12 flex flex-col justify-center text-white text-center text-3xl font-mono px-8 my-10 space-y-5">
+      <div class="flex flex-col item-center space-y-5">
+        <h1>Silahkan Pilih Bahasa Anda</h1>
+        <hr class="border-2 w-full" />
+        <h1>Please Select Your Language</h1>
+      </div>
+      <div class="language space-y-5 text-2xl">
+        <div class="flex justify-end">
+          <a href="masukanPin.html">INDONESIA >> </a>
+        </div>
+        <div class="flex justify-end">
+          <a href="" onclick="alert('bahasa inggris belum tersedia')">ENGLISH >> </a>
+        </div>
+        <div class="flex justify-end">
+          <a>CANCEL >> </a>
+        </div>
+      </div>
+      <div class="flex flex-col item-center space-y-5">
+        <h1>To Obtain Card Press "CANCEL"</h1>
+        <hr class="border-2 w-full" />
+        <h1>Tekan "CANCEL" Untuk Membatalkan</h1>
+      </div>
+    </div>
+    <div class="container-img flex justify-center items-center">
+      <img class="rounded-lg w-[70%]" src="./images/pilih-bahasa.png" />
+    </div>
+  </div>
+</body>
+
+</html>

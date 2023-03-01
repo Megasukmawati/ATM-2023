@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>ATM - Masukan Pin</title>
+
+</head>
+
+<body class="bg-[#324154] px-28 py-10 h-[100vh] flex items-center">
+  <div class="container bg-[#597298] rounded-lg flex justify-center items-center" style="height: 100%;">
+    <div
+      class="heading w-8/12 flex flex-col items-center justify-center text-white text-center text-3xl font-mono px-10">
+      <h1>Masukan Jumlah Nominal Pecahan 100.000 dan 50.000</h1>
+      <div class="my-10">
+        <input id="input" class="text-center rounded-lg" style="width: 45%; height: 50px; color: black;" type="number">
+        <a href="ambilKartu.html">
+            <button class="text-green-500" onclick="transaksiHandler()">ENTER >></button>
+        </a>
+        <a href="index.html">
+          <button class="text-red-500" onclick="transaksiHandler()">CANCEL>></button>
+        </a>
+      </div>
+      <h1>Tekan "CANCEL" Untuk Membatalkan</h1>
+
+    </div>
+    <img class="rounded-lg" src="./images/ambil-uang.jpg" width="40%" style="margin-bottom: -120px;" />
+  </div>
+
+  <script>
+    const input = document.getElementById("input")
+
+    const saldo = "5000000"
+
+    function transaksiHandler() {
+      if (input.value.length > 0) {
+        if (input.value < saldo) {
+          const konfirm = confirm(`Anda akan menarik uang sebesar ${input.value} sisa saldo anda ${saldo - input.value}`)
+          if (konfirm == true) {
+            location.href = "ambilKartu.html"
+          }
+        } else {
+          alert("Saldo anda tidak mencukupi")
+        }
+      } else {
+        alert("Masukan nominal")
+      }
+    }
+  </script>
+</body>
+
+</html>
