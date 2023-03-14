@@ -12,7 +12,7 @@
 				class="heading w-8/12 flex flex-col items-center justify-center text-white text-center text-[25pt] font-mono px-10">
 				<h1>Silahkan Masukan Pin Anda</h1>
                 <div class="mt-10">        
-                    <input class="text-black" type="password" id="pin">
+                    <input class="text-black w-[200px]" type="password" id="pin">
                     <button onclick="Click()" class="text-green-500">ENTER >></button>
                     <a href="index.html">    
                         <button  class="text-red-500">CANCEL >></button>
@@ -28,14 +28,12 @@
 		</div>
         <script>
             const pin = document.getElementById('pin');
-            
             function Click() {
             if (pin.value.length > 0) {
                 
-                if (pin.value == 123) {
-                    location.href = "jumlah.html"
+                if (pin.value == 123456) {
+                    location.href = "pilihNominal.html"
                 }
-    
                 else{
                     alert("Pin Yang Anda masukan salah")
                 }
