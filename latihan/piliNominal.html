@@ -14,31 +14,25 @@
     <div
       class="heading w-8/12 flex flex-col items-center justify-center text-white text-center text-[25pt] font-mono px-10">
       <h1>Silakan Pilih Paket Nominal</h1>
-      <div class="flex justify-center space-x-44 text-white font-mono text-3xl mt-8">
-        <div class="space-y-4 grid w-1/2">
-          <button onclick="Click(pengambilan.seratus)">
-            <- 100.000</button>
-              <button onclick="Click(pengambilan.duaratus)">
-                <- 200.000</button>
-                  <button onclick="Click(pengambilan.tigaratus)">
-                    <- 300.000</button>
-                      <button>
-                        <a href="nominalLain.html">
-                          <- Nominal <br>Lain
-                        </a></button>
+      <div class="flex flex-center " style="gap: 150px; margin-top: 50px; ">
+        <div class="flex flex-col " style="gap:20px">
+          <button onclick="Click(pengambilan.seratus)"> <- 100.000</button>
+          <button onclick="Click(pengambilan.duaratus)"><- 200.000</button>
+          <button onclick="Click(pengambilan.tigaratus)"><- 300.000</button>
+          <button><a href="nominalLain.html"><- Nominal <br>Lain</a></button>
         </div>
-        <div class="space-y-4 grid flex">
+        <div class="flex flex-col items-end" style="text-align: center; gap:20px">
           <button onclick="Click(pengambilan.limaratus)"> 500.000 -></button>
           <button onclick="Click(pengambilan.satujuta)"> 1.000.000 -></button>
           <button onclick="Click(pengambilan.satusetengah)"> 1.500.000 -></button>
-          <a href="ambilKartu.html" onclick="return confirm('maaf fitur iniu belum tersedia')">Transaksi -> <br /> <span
+          <a href="ambilKartu.html" onclick="return confirm('maaf fitur ini belum tersedia')">Transaksi -> <br /> <span
               style="margin-left: 35px;"></span></a>
 
         </div>
       </div>
     </div>
     <div>
-      <img src="./images/ambil-uang.jpg" alt="">
+      <img src="/src/images/ambil-uang.jpg" alt="">
     </div>
   </div>
 </body>
@@ -63,7 +57,7 @@
         `Anda Berhasil Menarik Saldo ${value} Sisa Saldo Anda ${uang}`
         );
       if (konfirm == true) {
-        location.href = "ambilkartu.html"
+        location.href = "masukanKartu.html"
         alert(`sisa uang anda ${uang - value}`)
       }
     }
