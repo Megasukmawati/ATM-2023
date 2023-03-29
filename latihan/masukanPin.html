@@ -14,7 +14,7 @@
                 <div class="mt-10">        
                     <input class="text-black w-[200px]" type="password" id="pin">
                     <button onclick="Click()" class="text-green-500">ENTER >></button>
-                    <a href="index.html">    
+                    <a href="masukanKartu.html">    
                         <button  class="text-red-500">CANCEL >></button>
                     </a>
                     <div class="mt-10">
@@ -29,17 +29,12 @@
         <script>
             const pin = document.getElementById('pin');
             function Click() {
-            if (pin.value.length > 0) {
-                
-                if (pin.value == 123456) {
-                    location.href = "pilihNominal.html"
-                }
-                else{
-                    alert("Pin Yang Anda masukan salah")
-                }
-            }
-            else{
-                alert("Pin Anda Tidak Boleh Kosong")
+            if (pin.value == '') {
+                alert("pin tidak boleh kosong")
+            }else if(pin.value == 123456){
+                location.href= 'pilihNominal.html'
+            }else{
+                alert("pin yang anda masukan salah")
             }
         }
         </script>
